@@ -24,6 +24,10 @@ steps:
   inputs:
     containerRegistry: 'dockerhub'
     command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'aquareg'
+    command: 'login'
 - task: aquasecScanner@4
   inputs:
     image: 'ubuntu:latest'
