@@ -24,16 +24,14 @@ steps:
   inputs:
     containerRegistry: 'dockerhub'
     command: 'login'
-    - task: aquasecScanner@4
-      inputs:
-        image: 'ubuntu:latest'
-        scanType: 'hosted'
-        register: true
-        hideBase: false
-        showNegligible: true
-        windowsScannerVersion: '6.5.0'
-        scanner: 'registry.aquasec.com/scanner:2022.4'
-        registry: 'dockerhub'
-        connection: 'aqua'
-        showWillNotFix: true
-        registerCompliant: true
+- task: aquasecScanner@4
+  inputs:
+    image: 'ubuntu:latest'
+    scanType: 'hosted'
+    register: true
+    hideBase: false
+    showNegligible: true
+    windowsScannerVersion: '6.5.0'
+    scanner: 'registry.aquasec.com/scanner:2022.4'
+    registry: 'dockerhub'
+    connection: 'aqua'
