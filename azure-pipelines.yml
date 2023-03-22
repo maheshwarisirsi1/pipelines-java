@@ -40,3 +40,4 @@ steps:
     runOptions: '-e AQUA_TOKEN=7bf6d0392fcfb6cea1ca5364a65583d556ab92a3'
     registry: 'Docker Hub'
     connection: 'aqua'
+    customFlags: '--direct-cc'
