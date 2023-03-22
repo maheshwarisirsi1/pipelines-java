@@ -31,7 +31,7 @@ steps:
 - task: aquasecScanner@4
   inputs:
     image: 'ubuntu:latest'
-    scanType: 'hosted'
+    scanType: 'local'
     register: true
     hideBase: false
     showNegligible: true
